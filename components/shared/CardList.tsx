@@ -1,7 +1,7 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 type LinkRoute = {
   label: string;
@@ -13,6 +13,14 @@ type LinkRoute = {
 };
 
 const links: LinkRoute[] = [
+  {
+    label: "Guías",
+    slug: "/guias",
+    description: "Acá podrás ver mis distintas guías",
+    image: {
+      url: "/images/links/guias.png"
+    }
+  },
   {
     label: "Guardia de lactancia",
     slug: "https://api.whatsapp.com/send?phone=+5492475405535&text=Hola.%20Necesito%20una%20consulta%20cuanto%20antes.",
@@ -40,15 +48,7 @@ const links: LinkRoute[] = [
       url: "/images/links/doula.jpeg"
     }
   },
-  {
-    label: "Destete",
-    slug: "https://api.whatsapp.com/send?phone=+5492475405535&text=Hola.%20Quisiera%20un%20turno%20para%20una%20consulta%20sobre...",
-    description:
-      "¿Qué es el destete? Aprendé a cómo ayudar en la transición de la misma",
-    image: {
-      url: "/images/links/destete.jpg"
-    }
-  },
+
   {
     label: "Alimentación complementaria",
     slug: "https://api.whatsapp.com/send?phone=+5492475405535&text=Hola.%20Quisiera%20un%20turno%20para%20una%20consulta%20sobre...",
