@@ -66,42 +66,34 @@ const links: LinkRoute[] = [
     image: {
       url: "/images/links/crianza.jpeg"
     }
-  },
-  {
-    label: "Primeros Auxilios",
-    slug: "https://api.whatsapp.com/send?phone=+5492475405535&text=Hola.%20Quisiera%20un%20turno%20para%20una%20consulta%20sobre%20primeros%20auxilios",
-    description:
-      "Praparate para cualquier inconveniente: como actuar, atragantamiento, etc",
-    image: {
-      url: "/images/links/primeros-auxilios.jpeg"
-    }
   }
 ];
 
 export const CardList = () => {
   return (
-    <section className="sectionCards my-8">
+    <section className="grid md:grid-cols-3 gap-8 my-8 items-stretch">
       {links.map(({ label, slug, description, image }) => (
-        <Link className="text-active" href={slug} key={label}>
+        <Link className="text-active h-full" href={slug} key={label}>
           <motion.div
+            className="h-full"
             variants={{
-              visible: { scale: 1, transition: { duration: 0.4 } },
-              hidden: { scale: 0.6 }
+              visible: { scale: 1, transition: { duration: 0.6 } },
+              hidden: { scale: 0.8 }
             }}
             initial="hidden"
             whileInView="visible"
           >
             <article
-              className="w-full shadow-lg
-            dark:border dark:border-violetSecondary
-            rounded-2xl overflow-hidden"
+              className="w-full h-full flex flex-col justify-between shadow-lg
+          dark:border dark:border-violetSecondary
+          rounded-2xl overflow-hidden"
             >
               <div className="overflow-hidden">
                 <Image
                   src={image.url}
                   alt={label}
-                  width="300"
-                  height="300"
+                  width={150}
+                  height={150}
                   sizes="100vw"
                   className="hover:scale-125 ease-in duration-200"
                   style={{
@@ -112,9 +104,10 @@ export const CardList = () => {
                   }}
                 />
               </div>
-              <div className="flex flex-col justify-between m-4">
+
+              <div className="flex flex-col justify-between flex-1 m-4">
                 <h3 className="text-xl text-primary mb-2">{label}</h3>
-                <p className="text-gray-400">{description}</p>
+                <p className="text-gray-400 mb-auto">{description}</p>
               </div>
             </article>
           </motion.div>
