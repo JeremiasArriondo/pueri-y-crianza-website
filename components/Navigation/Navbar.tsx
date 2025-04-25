@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { CloseIcon } from "../icons/CloseIcon";
 import { MenuIcon } from "../icons/MenuIcon";
-import { ThemeSwitch } from "../ThemeSwitch";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -60,9 +59,6 @@ export function Navbar() {
           ))}
         </ul>
         <div className="flex items-center justify-center gap-4 px-2 md:px-0">
-          <div className="hidden sm:block">
-            <ThemeSwitch />
-          </div>
           <Link href={"/"}>
             <Image
               src={"/images/logo.webp"}
@@ -90,9 +86,6 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 inline-flex sm:hidden">
-              <ThemeSwitch />
-            </div>
           </div>
         )}
       </nav>

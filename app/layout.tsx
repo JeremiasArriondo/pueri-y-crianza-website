@@ -1,9 +1,8 @@
-import { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import "@/styles/globals.css";
 import { Footer } from "@/components/Navigation/Footer";
 import { Navbar } from "@/components/Navigation/Navbar";
-import { Providers } from "@/components/Providers";
+import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -37,12 +36,10 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head />
       <body className="dark:bg-black">
-        <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-        </Providers>
+        <Navbar />
+        {children}
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );
