@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { menuItems } from "@/data/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuIcon } from "../icons/MenuIcon";
+import { useEffect, useRef, useState } from "react";
 import { CloseIcon } from "../icons/CloseIcon";
-import { menuItems } from "@/data/constants";
+import { MenuIcon } from "../icons/MenuIcon";
 import { ThemeSwitch } from "../ThemeSwitch";
 
 export function Navbar() {
@@ -32,8 +32,8 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <nav className="border-b border-violetSecondary py-2 mx-auto sticky top-0 z-40 xl:fixed xl:top-0 xl:left-0 xl:w-full bg-violetSecondary backdrop-filter backdrop-blur-lg bg-opacity-30">
-      <div className="flex justify-between items-center relative max-w-screen-md px-2 md:px-0 md:mx-auto">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-gray-900/70 border-b border-purple-100 dark:border-purple-900">
+      <nav className="container flex p-4 justify-between items-center relative md:mx-auto">
         <div className="sm:hidden">
           <button onClick={openMenuMobile} className="block">
             {open ? (
@@ -53,7 +53,7 @@ export function Navbar() {
           {menuItems.map(({ path, name }) => (
             <li
               key={name}
-              className="text-xl text-white hover:text-violetSecondary dark:hover:text-violetPrimary"
+              className="text-xl hover:text-violetSecondary dark:hover:text-violetPrimary"
             >
               <Link href={path}>{name}</Link>
             </li>
@@ -68,8 +68,8 @@ export function Navbar() {
               src={"/images/logo.webp"}
               alt="Logo PueriyCrianza"
               className="object-cover rounded-full"
-              width={50}
-              height={50}
+              width={40}
+              height={40}
             />
           </Link>
         </div>
@@ -95,7 +95,7 @@ export function Navbar() {
             </div>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
