@@ -75,12 +75,14 @@ export default function Home() {
                     Mis Servicios
                   </Button>
                 </Link>
-                <Button
-                  variant="outline"
-                  className="rounded-full border-purple-200 dark:border-purple-800 h-12 px-8 text-lg"
-                >
-                  Conoce más
-                </Button>
+                <Link href="/sobre-mi">
+                  <Button
+                    variant="outline"
+                    className="rounded-full border-purple-200 dark:border-purple-800 h-12 px-8 text-lg"
+                  >
+                    Conoceme más
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 
