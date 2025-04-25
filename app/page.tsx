@@ -2,7 +2,9 @@
 import { CardList } from "@/components/shared/CardList";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { ChevronRight, Heart } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -26,34 +28,11 @@ export default function Home() {
     }
   };
   return (
-    <main className={"min-h-screen mx-4 md:mx-auto max-w-screen-md"}>
-      {/* <article className="w-full flex justify-center my-8 xl:mt-24">
-        <MotionDiv
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <div className="relative rounded-lg shadow-lgDark ">
-            <div className="z-10 relative overflow-hidden rounded-full p-[3px] m-[-2px] isolate">
-              <div className="will-change-transform animate-buttonStroke blur-[4px] origin-[center_center] absolute top-0 left-0 right-0 bottom-0 bg-buttonConicGradient"></div>
-              <div className="relative z-100 w-[200px] h-[200px]">
-                <Image
-                  src={"/images/profile-pic.jpeg"}
-                  alt="Profile picture"
-                  className="object-cover rounded-full"
-                  priority
-                  fill
-                />
-              </div>
-            </div>
-          </div>
-        </MotionDiv>
-      </article> */}
+    <main className={"min-h-screen mx-4 md:mx-auto"}>
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-50 to-transparent dark:from-purple-950"></div>
+      {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent dark:from-gray-900"></div> */}
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-50 to-transparent dark:from-purple-950"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent dark:from-gray-900"></div>
-
+      <section className="relative overflow-hidden my-20 md:py-28">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -91,9 +70,11 @@ export default function Home() {
                 información actualizada y ayudando en lo que pueda desde mi rol.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button className="rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 h-12 px-8 text-lg">
-                  Mis Servicios
-                </Button>
+                <Link href="#services">
+                  <Button className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 h-12 px-8 text-lg">
+                    Mis Servicios
+                  </Button>
+                </Link>
                 <Button
                   variant="outline"
                   className="rounded-full border-purple-200 dark:border-purple-800 h-12 px-8 text-lg"
@@ -108,7 +89,7 @@ export default function Home() {
               animate="visible"
               variants={fadeIn}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative"
+              className="relative mb-8"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-md opacity-75 animate-pulse"></div>
               <div className="relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl aspect-square max-w-md mx-auto">
@@ -150,8 +131,55 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      <CardList />
+      {/* Services Section */}
+      <section className="py-20" id="services">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Mis Servicios
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+              Ofrezco acompañamiento personalizado para familias en diferentes
+              etapas del embarazo y la crianza.
+            </p>
+          </motion.div>
+          <CardList />
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
+              <div className="text-white">
+                <h2 className="text-3xl font-bold mb-4">
+                  ¿Necesitas acompañamiento?
+                </h2>
+                <p className="mb-6 text-white/90">
+                  Estoy aquí para apoyarte en tu camino de crianza. Contáctame
+                  para una consulta personalizada.
+                </p>
+                <Button className="rounded-full bg-white text-purple-600 hover:bg-gray-100 gap-2 h-12 px-8">
+                  Agenda una consulta
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+              <div className="flex items-center justify-center">
+                <div className="bg-white/20 backdrop-blur-sm p-8 rounded-full">
+                  <Heart className="h-24 w-24 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
