@@ -2,22 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { guides } from "@/data/constants";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
-const guides = [
-  {
-    id: 1,
-    title: "Guía Completa de Alimentación complementaria",
-    description:
-      "Esta guía fue creada con el objetivo de acompañar a las familias en el inicio de la alimentación complementaria.",
-    pages: 22,
-    color: "from-pink-400 to-rose-600",
-    icon: "📚"
-  }
-];
-
-export default function Home() {
+export default async function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-100 to-white dark:from-purple-950 dark:to-slate-900">
       <section className="relative overflow-hidden">
@@ -67,10 +57,12 @@ export default function Home() {
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {guide.pages} páginas
                       </span>
-                      <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
-                        <Download className="h-4 w-4" />
-                        Descargar
-                      </Button>
+                      <Link href={`/guias/${guide.slug}`}>
+                        <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
+                          <Download className="h-4 w-4" />
+                          Descargar
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
