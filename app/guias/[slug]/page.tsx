@@ -130,6 +130,7 @@ export default async function GuiaDetalle(props: { params: Params }) {
                 price={guide.price}
                 bgColor={guide.bg}
                 title={guide.title}
+                guideSlug={guide.slug}
               />
 
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">

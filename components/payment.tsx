@@ -2,28 +2,54 @@
 
 import { PriceBadge } from "@/components/price-badge";
 import { Button } from "@/components/ui/button";
+import { generateClientId } from "@/lib/utils";
 import { CheckCircle, CreditCard, Download } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PaymentProps {
   price: number;
   bgColor: string;
   title: string;
+  guideSlug: string;
 }
 
-export function Payment({ price, bgColor, title }: PaymentProps) {
+export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
   const [paymentStatus, setPaymentStatus] = useState<
     "idle" | "processing" | "success"
   >("idle");
 
-  const handlePayment = () => {
+  const handlePayment = async () => {
     setPaymentStatus("processing");
+    const clientId = localStorage.getItem("clientId");
+    try {
+      const res = await fetch("/api/create-preference", {
+        method: "POST",
+        body: JSON.stringify({ title, price, guideSlug, clientId }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
 
-    // Simulación de procesamiento de pago
-    setTimeout(() => {
-      setPaymentStatus("success");
-    }, 2000);
+      const data = await res.json();
+      console.log({ data });
+      if (data.id) {
+        // Redirige al checkout de MercadoPago
+        window.location.href = `https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=${data.id}`;
+      } else {
+        throw new Error("Preferencia no generada");
+      }
+    } catch (err) {
+      console.error("Error en el pago:", err);
+      setPaymentStatus("idle");
+    }
   };
+
+  // Cuando renderizas la página de la guía
+  useEffect(() => {
+    if (!localStorage.getItem("clientId")) {
+      localStorage.setItem("clientId", generateClientId());
+    }
+  }, []);
 
   if (paymentStatus === "success") {
     return (
