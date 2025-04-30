@@ -17,7 +17,7 @@ export const guides = [
     pages: 22,
     icon: "📚",
     slug: "guia-completa-alimentacion-complementaria",
-    price: 1000,
+    price: 1,
     color: "pink",
     gradient: "bg-gradient-to-r from-pink-500 to-purple-500",
     bg: "bg-pink-500",
