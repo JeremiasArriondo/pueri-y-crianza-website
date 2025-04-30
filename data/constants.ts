@@ -70,7 +70,7 @@ export const guides = [
     price: 7000,
     color: "pink",
     gradient: "bg-gradient-to-r from-green-200 to-teal-200",
-    bg: "bg-pink-500",
+    bg: "bg-teal-400",
     chapters: [
       { title: "Qué esperar en la primera hora de vida" },
       { title: "Cómo es una toma efectiva" },
@@ -108,7 +108,7 @@ export const guides = [
     price: 1,
     color: "pink",
     gradient: "bg-gradient-to-r from-yellow-200 to-orange-200",
-    bg: "bg-pink-500",
+    bg: "bg-orange-300",
     chapters: [
       { title: "Conexión cuerpo-mente y respiración consciente" },
       { title: "Journaling y visualizaciones para prepararse emocionalmente" },
@@ -132,7 +132,7 @@ export const guides = [
       "Esta guía es una invitación a comprender el sueño infantil desde un enfoque respetuoso, actualizado y humano. Vas a encontrar información clara sobre cómo se desarrolla el sueño mes a mes, qué es normal, por qué los bebés se despiertan, cómo hacer un colecho seguro y qué mitos es importante dejar atrás. Una herramienta amorosa para acompañar a tu bebé sin culpa, sin presiones y cuidando también tu descanso y tu salud mental. Ideal para madres, padres, parejas gestantes y cuidadores que quieren dejar de lado los métodos invasivos y conectar desde el apego y la confianza.",
     pages: 22,
     icon: "📚",
-    slug: "guia-de-sueño-respetuoso-en-el-primer-año-de-vida-PUERIYCRIANZA",
+    slug: "guia-de-sueno-respetuoso-en-el-primer-ano-de-vida-PUERIYCRIANZA",
     price: 7000,
     color: "pink",
     gradient: "bg-gradient-to-r from-pink-200 to-rose-200",
@@ -174,7 +174,7 @@ export const guides = [
     price: 7000,
     color: "pink",
     gradient: "bg-gradient-to-r from-purple-200 to-violet-200",
-    bg: "bg-pink-500",
+    bg: "bg-violet-300",
     chapters: [
       { title: "¿Qué es el BLW?" },
       { title: "Beneficios del método" },
