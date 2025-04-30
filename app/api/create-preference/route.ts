@@ -20,6 +20,7 @@ export async function POST(req: NextRequest) {
             currency_id: "ARS"
           }
         ],
+        auto_return: "approved",
         metadata: {
           guideSlug,
           clientId
