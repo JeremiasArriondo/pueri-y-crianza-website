@@ -13,10 +13,9 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     if (body.type !== "payment") return NextResponse.json({ ok: true });
-
     const paymentId = body.data.id;
     const payment = await new Payment(mercadopago).get({ id: paymentId });
-
+    console.log({ payment });
     if (payment.status === "approved") {
       const metadata = payment.metadata;
 
