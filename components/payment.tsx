@@ -44,7 +44,23 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
     }
   };
 
-  // Cuando renderizas la página de la guía
+  useEffect(() => {
+    const clientId = localStorage.getItem("clientId");
+    if (!clientId) return;
+
+    fetch("/api/has-paid", {
+      method: "POST",
+      body: JSON.stringify({ clientId, guideSlug }),
+      headers: { "Content-Type": "application/json" }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.paid) {
+          setPaymentStatus("success");
+        }
+      });
+  }, [guideSlug]);
+
   useEffect(() => {
     if (!localStorage.getItem("clientId")) {
       localStorage.setItem("clientId", generateClientId());
