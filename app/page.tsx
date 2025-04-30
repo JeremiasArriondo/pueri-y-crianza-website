@@ -158,7 +158,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl overflow-hidden">
+          <div className="bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
               <div className="text-white">
                 <h2 className="text-3xl font-bold mb-4">

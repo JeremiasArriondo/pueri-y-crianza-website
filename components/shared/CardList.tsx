@@ -36,7 +36,7 @@ const links: LinkRoute[] = [
     description:
       "Inicio de lactancia, dificultades en la lactancia, prematuros, grietas, mastitis, prevención de dificultades, vuelta al trabajo, conservación de la leche, relactación, inhibición, etc.",
     image: {
-      url: "/images/links/pregnant.jpg"
+      url: "/images/links/lactancia.webp"
     }
   },
   {
@@ -55,7 +55,7 @@ const links: LinkRoute[] = [
     description:
       "Introducción a la alimentación complementaria para cubrir las necesidades nutricionales de un bebé en crecimiento",
     image: {
-      url: "/images/links/food-baby.jpg"
+      url: "/images/links/food-baby.webp"
     }
   },
   {
@@ -64,7 +64,7 @@ const links: LinkRoute[] = [
     description:
       "Aspectos relacionados a la crianza como control de esfínteres, sueño, límites, miedos, apego, etc.",
     image: {
-      url: "/images/links/crianza.jpeg"
+      url: "/images/links/crianza.webp"
     }
   }
 ];
