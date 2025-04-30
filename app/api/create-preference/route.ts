@@ -21,9 +21,9 @@ export async function POST(req: NextRequest) {
           }
         ],
         back_urls: {
-          success: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`,
-          failure: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`,
-          pending: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`
+          success: `https://pueri-y-crianza.vercel.app/guias/${guideSlug}`,
+          failure: `https://pueri-y-crianza.vercel.app/guias/${guideSlug}`,
+          pending: `https://pueri-y-crianza.vercel.app/guias/${guideSlug}`
         },
         auto_return: "approved",
         metadata: {
