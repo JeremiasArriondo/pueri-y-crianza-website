@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import Link from "next/link";
 
-export default async function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-100 to-white dark:from-purple-950 dark:to-slate-900">
       <section className="relative overflow-hidden">
@@ -42,7 +42,7 @@ export default async function Home() {
               <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:scale-[1.02]">
                 <div className="p-1">
                   <div
-                    className={`bg-gradient-to-r ${guide.color} rounded-t-lg p-6 text-white`}
+                    className={`${guide.gradient} rounded-t-lg p-6 text-white`}
                   >
                     <div className="flex justify-between items-start">
                       <span className="text-4xl">{guide.icon}</span>
