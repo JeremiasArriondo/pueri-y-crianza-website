@@ -20,6 +20,11 @@ export async function POST(req: NextRequest) {
             currency_id: "ARS"
           }
         ],
+        back_urls: {
+          success: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`,
+          failure: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`,
+          pending: `https://pueri-y-crianza.vercel.app/guide/${guideSlug}`
+        },
         auto_return: "approved",
         metadata: {
           guideSlug,
