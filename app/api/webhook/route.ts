@@ -10,12 +10,11 @@ const supabase = createClient(
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const body: { data: { id: string } } = await req.json();
 
-    if (body.type !== "payment") return NextResponse.json({ ok: true });
     const paymentId = body.data.id;
     const payment = await new Payment(mercadopago).get({ id: paymentId });
-    console.log({ payment });
+
     if (payment.status === "approved") {
       const metadata = payment.metadata;
 
