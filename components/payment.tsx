@@ -4,6 +4,7 @@ import { PriceBadge } from "@/components/price-badge";
 import { Button } from "@/components/ui/button";
 import { generateClientId } from "@/lib/utils";
 import { CheckCircle, CreditCard, Download } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface PaymentProps {
@@ -17,7 +18,7 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
   const [paymentStatus, setPaymentStatus] = useState<
     "idle" | "processing" | "success"
   >("idle");
-
+  const searchParams = useSearchParams();
   const handlePayment = async () => {
     setPaymentStatus("processing");
     const clientId = localStorage.getItem("clientId");
@@ -62,6 +63,13 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
   }, [guideSlug]);
 
   useEffect(() => {
+    const paymentStatus = searchParams.get("status");
+    if (paymentStatus === "approved") {
+      setPaymentStatus("success");
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
     if (!localStorage.getItem("clientId")) {
       localStorage.setItem("clientId", generateClientId());
     }
@@ -77,10 +85,12 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
         <p className="text-gray-500 dark:text-gray-400 mb-4">
           Gracias por adquirir "{title}"
         </p>
-        <Button className={`w-full ${bgColor} hover:opacity-90`}>
-          <Download className="h-4 w-4 mr-2" />
-          Descargar guía
-        </Button>
+        <a href={`/guias/${guideSlug}.pdf`} download>
+          <Button className={`w-full ${bgColor} hover:opacity-90`}>
+            <Download className="h-4 w-4 mr-2" />
+            Descargar guía
+          </Button>
+        </a>
       </div>
     );
   }
