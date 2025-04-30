@@ -2,20 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { guides } from "@/data/constants";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-
-const guides = [
-  {
-    id: 1,
-    title: "Guía Completa de Alimentación complementaria",
-    description:
-      "Esta guía fue creada con el objetivo de acompañar a las familias en el inicio de la alimentación complementaria.",
-    pages: 22,
-    color: "from-pink-400 to-rose-600",
-    icon: "📚"
-  }
-];
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -52,7 +42,7 @@ export default function Home() {
               <Card className="overflow-hidden h-full hover:shadow-xl transition-all duration-300 border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:scale-[1.02]">
                 <div className="p-1">
                   <div
-                    className={`bg-gradient-to-r ${guide.color} rounded-t-lg p-6 text-white`}
+                    className={`${guide.gradient} rounded-t-lg p-6 text-white`}
                   >
                     <div className="flex justify-between items-start">
                       <span className="text-4xl">{guide.icon}</span>
@@ -67,10 +57,12 @@ export default function Home() {
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {guide.pages} páginas
                       </span>
-                      <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
-                        <Download className="h-4 w-4" />
-                        Descargar
-                      </Button>
+                      <Link href={`/guias/${guide.slug}`}>
+                        <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
+                          <Download className="h-4 w-4" />
+                          Descargar
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

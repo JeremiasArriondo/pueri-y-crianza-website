@@ -9,6 +9,13 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
+  safelist: [
+    { pattern: /bg-./ },
+    { pattern: /text-./ },
+    { pattern: /border-./ },
+    { pattern: /from-./ },
+    { pattern: /to-./ }
+  ],
   theme: {
     container: {
       center: true,
