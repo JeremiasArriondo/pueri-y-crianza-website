@@ -103,7 +103,7 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
           price={price}
           size="lg"
           showDiscount={price > 10}
-          originalPrice={price > 10 ? price * 1.25 : undefined}
+          originalPrice={price > 10 ? price * 1.68 : undefined}
         />
       </div>
 

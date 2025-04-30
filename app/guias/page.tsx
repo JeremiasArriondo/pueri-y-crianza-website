@@ -53,12 +53,13 @@ export default function Home() {
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
                       {guide.description}
                     </p>
+
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {guide.pages} páginas
                       </span>
                       <Link href={`/guias/${guide.slug}`}>
-                        <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0">
+                        <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-700 hover:to-pink-700 text-white border-0">
                           <Download className="h-4 w-4" />
                           Descargar
                         </Button>

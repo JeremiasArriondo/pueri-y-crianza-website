@@ -54,7 +54,7 @@ export default async function GuiaDetalle(props: { params: Params }) {
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 mr-1" />
-                  <span>~{Math.round(guide.pages * 2.5)} min de lectura</span>
+                  <span>~{Math.round(guide.pages * 2)} min de lectura</span>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default async function GuiaDetalle(props: { params: Params }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold mb-4">Capítulos</h2>
+              <h2 className="text-xl font-semibold mb-4">Temas</h2>
               <div className="space-y-4">
                 {guide.chapters.map((chapter, index) => (
                   <div
@@ -74,11 +74,7 @@ export default async function GuiaDetalle(props: { params: Params }) {
                   >
                     <div className="flex justify-between items-center mb-1">
                       <h3 className="font-medium">{chapter.title}</h3>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {chapter.pages} páginas
-                      </span>
                     </div>
-                    {/* <Progress value={100} className="h-1" /> */}
                   </div>
                 ))}
               </div>
