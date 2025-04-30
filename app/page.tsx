@@ -43,27 +43,27 @@ export default function Home() {
               className="text-center md:text-left"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
                   Me presento.
                 </span>
               </h1>
-              <h2 className="text-3xl md:text-4xl font-medium mb-6">
+              <h2 className="text-3xl text-gray-400 md:text-4xl font-medium mb-6">
                 Soy Meel,{" "}
-                <span className="text-pink-500 dark:text-pink-400">
+                <span className="text-pink-300 dark:text-pink-400">
                   Puericultora
                 </span>
                 ,
                 <br />
-                <span className="text-purple-500 dark:text-purple-400">
+                <span className="text-stone-300 dark:text-purple-400">
                   Especialista en alimentación complementaria
                 </span>
                 ,
                 <br />
-                <span className="text-green-500 dark:text-green-400">
+                <span className="text-green-700 dark:text-green-400">
                   crianza respetuosa
                 </span>{" "}
                 y{" "}
-                <span className="text-blue-500 dark:text-blue-400">Doula</span>.
+                <span className="text-blue-800 dark:text-blue-400">Doula</span>.
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-xl mx-auto md:mx-0">
                 Mi deseo es acompañar lactancias y crianzas proveyendo
@@ -71,7 +71,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link href="#services">
-                  <Button className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 h-12 px-8 text-lg">
+                  <Button className="w-full rounded-full bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-600 hover:to-pink-600 text-white border-0 h-12 px-8 text-lg">
                     Mis Servicios
                   </Button>
                 </Link>
