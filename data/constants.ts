@@ -198,5 +198,78 @@ export const guides = [
       { title: "Por qué no forzar a comer" },
       { title: "Mensaje final para las familias" }
     ]
+  },
+  {
+    id: 6,
+    title: "Guía de crianza respestuosa desde el nacimiento",
+    description:
+      "Guía de crianza que promueve el respeto, la conexión y el amor desde el nacimiento, reconociendo las necesidades emocionales básicas del bebé.",
+    longDescription:
+      "Esta guía de crianza respetuosa propone acompañar a los bebés desde el amor, el respeto y la conexión emocional. Reconoce que, aunque nadie nace sabiendo ser madre o padre, los bebés sí nacen sabiendo lo que necesitan: contacto físico, presencia constante, una voz que los contenga y brazos que les brinden seguridad. Criar con respeto implica escuchar profundamente y responder con empatía a esas necesidades esenciales.",
+    pages: 48,
+    icon: "📚",
+    slug: "guia-de-crianza-respetuosa-desde-el-nacimiento-PUERIYCRIANZA",
+    price: 7000,
+    color: "pink",
+    gradient: "bg-gradient-to-r from-pink-200 to-pink-200",
+    bg: "bg-pink-500",
+    chapters: [
+      { title: "¿Qué es la crianza respetuosa?" },
+      { title: "El apego seguro y su importancia en el desarrollo" },
+      { title: "Conocer y respetar las necesidades básicas del bebé" },
+      { title: "Cómo acompañar el llanto sin dejar llorar" },
+      { title: "El lenguaje en la crianza: cómo hablamos, cómo impactamos" },
+      { title: "Vínculo, contacto y porteo como base emocional" },
+      { title: "La importancia de la presencia (más que la perfección)" },
+      { title: "Límites desde el primer año: sostener con amor sin castigar" },
+      { title: "Cómo implementar límites en el día a día" },
+      { title: "Cómo manejar los berrinches en público" },
+      { title: "¿Qué hacer si rompen un límite repetidamente?" },
+      { title: "Cómo conectar con su frustración" },
+      { title: "¿Qué hacer cuando el adulto se desregula?" },
+      { title: "¿Cómo acompañar a hermanos en la crianza respetuosa?" },
+      { title: "¿Cómo promover la empatía entre hermanos?" },
+      { title: "¿Qué hacer ante celos de un hermano?" },
+      { title: "¿Cuáles son señales de estrés en adultos durante la crianza?" },
+      { title: "La regulación emocional del adulto como base de la crianza" },
+      { title: "Desmontando frases dañinas y creencias comunes" },
+      { title: "Por qué no usamos la violencia física para criar" }
+    ]
+  },
+  {
+    id: 7,
+    title: "Guía completa sobre el destete",
+    description:
+      "Guía para un destete respetuoso que propone cerrar la etapa de lactancia con amor, empatía y conexión, respetando el ritmo de madre e hijo.",
+    longDescription:
+      "Esta guía para un destete respetuoso invita a acompañar el fin de la lactancia como un proceso de transición amorosa, y no como una ruptura abrupta. Destetar no es simplemente dejar de amamantar, sino cerrar una etapa fundamental del vínculo entre madre e hijo con empatía, paciencia y respeto mutuo. Escuchar las señales del bebé, atender las propias emociones y transitar este cambio desde la conexión permite que el destete sea una experiencia amorosa, natural y contenida para ambos.",
+    pages: 25,
+    icon: "📚",
+    slug: "guia-sobre-como-lograr-el-destete-respetuoso-PUERIYCRIANZA",
+    price: 7000,
+    color: "red",
+    gradient: "bg-gradient-to-r from-red-200 to-red-200",
+    bg: "bg-red-300",
+    chapters: [
+      { title: "¿Qué es el destete respetuoso?" },
+      { title: "Tipos de destete" },
+      { title: "¿Cuándo es el mejor momento para iniciar el destete?" },
+      { title: "Estrategias prácticas para un destete amoroso" },
+      { title: "Cómo acompañar las emociones en el proceso" },
+      { title: "Frases útiles para usar en el destete (según edad)" },
+      {
+        title:
+          "Psicología del destete: lo que vive el niño y consejos para la madre."
+      },
+      { title: "¿Cómo puede acompañar el otro tutor en el destete?" },
+      { title: "Qué esperar: cambios en el sueño, alimentación, emociones" },
+      { title: "🚫 Qué NO hacer al destetar (y por qué evitarlo)" },
+      { title: "🩺 Destete por motivos médicos (repentino o no deseado)" },
+      { title: "👧 Destete de niños mayores (más de 3 años)" },
+      {
+        title: "Mi experiencia como puericultora y doula acompañando destetes"
+      },
+      { title: "Libros que recomiendo leer" }
+    ]
   }
 ];
