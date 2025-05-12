@@ -32,9 +32,28 @@ export default function Home() {
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-50 to-transparent dark:from-purple-950"></div>
       {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent dark:from-gray-900"></div> */}
       {/* Hero Section */}
-      <section className="relative overflow-hidden my-20 md:py-28">
+      <section className="relative overflow-hidden my-12 md:py-20">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative my-8"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-md opacity-75 animate-pulse"></div>
+              <div className="relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl aspect-square max-w-md mx-auto">
+                <Image
+                  src={"/images/profile-pic.jpeg"}
+                  alt="Meel"
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </motion.div>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -78,31 +97,11 @@ export default function Home() {
                 <Link href="/sobre-mi">
                   <Button
                     variant="outline"
-                    className="rounded-full border-purple-200 dark:border-purple-800 h-12 px-8 text-lg"
+                    className="w-full rounded-full border-purple-200 dark:border-purple-800 h-12 px-8 text-lg"
                   >
                     Conoceme más
                   </Button>
                 </Link>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative mb-8"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-md opacity-75 animate-pulse"></div>
-              <div className="relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl aspect-square max-w-md mx-auto">
-                <Image
-                  src={"/images/profile-pic.jpeg"}
-                  alt="Meel"
-                  width={500}
-                  height={500}
-                  className="object-cover"
-                  priority
-                />
               </div>
             </motion.div>
           </div>
