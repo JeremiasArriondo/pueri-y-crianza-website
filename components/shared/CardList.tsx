@@ -27,7 +27,7 @@ const links: LinkRoute[] = [
     description:
       "Para consultas por problemas comunes o complejos, de manera urgente. Te invito a enviarme tu consulta.",
     image: {
-      url: "/images/links/guardia-pueri.png"
+      url: "/images/links/guardia-pueri.webp"
     }
   },
   {
