@@ -10,7 +10,7 @@ export default function SobreMi() {
   return (
     <main className={"min-h-screen mx-4 md:mx-auto max-w-screen-md"}>
       <div className="flex flex-col gap-4 xl:mt-24">
-        <div>
+        {/* <div>
           <h2 className="text-xl text-center py-2 rounded-3xl my-4 bg-pink-100 text-black dark:text-black">
             Acerca de mí
           </h2>
@@ -24,7 +24,7 @@ export default function SobreMi() {
             merecen. Busco un puesto donde pueda ser util para acompañar desde
             mi rol, sea presencial o virtual.
           </p>
-        </div>
+        </div> */}
         <div>
           <h2 className="text-xl text-center py-2 rounded-3xl my-4 bg-pink-100 text-black dark:text-black">
             Contacto

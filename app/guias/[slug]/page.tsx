@@ -1,11 +1,29 @@
 import { Payment } from "@/components/payment";
 import { guides } from "@/data/constants";
 import { BookOpen, Clock, FileText, Star } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 
 type Params = Promise<{
   slug: string;
 }>;
+
+export async function generateMetadata(props: {
+  params: Params;
+}): Promise<Metadata | undefined> {
+  const params = await props.params;
+  const guide = guides.find((g) => g.slug === params.slug);
+  if (!guide) {
+    return;
+  }
+
+  const { title, description } = guide;
+  return {
+    metadataBase: new URL("https://pueri-y-crianza.vercel.app"),
+    title: title,
+    description: description
+  };
+}
 
 export default async function GuiaDetalle(props: { params: Params }) {
   const params = await props.params;
