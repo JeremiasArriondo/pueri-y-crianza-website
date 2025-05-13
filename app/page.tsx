@@ -33,7 +33,7 @@ export default function Home() {
       {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent dark:from-gray-900"></div> */}
       {/* Hero Section */}
       <section className="relative overflow-hidden my-12 md:py-20">
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
@@ -167,10 +167,12 @@ export default function Home() {
                   Estoy aquí para apoyarte en tu camino de crianza. Contáctame
                   para una consulta personalizada.
                 </p>
-                <Button className="rounded-full bg-white text-purple-600 hover:bg-gray-100 gap-2 h-12 px-8">
-                  Agenda una consulta
-                  <ChevronRight className="h-4 w-4" />
-                </Button>
+                <Link href="https://api.whatsapp.com/send?phone=+5492475405535&text=Hola.%20Quisiera%20un%20turno%20para%20una%20consulta%20sobre...">
+                  <Button className="rounded-full bg-white text-purple-600 hover:bg-gray-100 gap-2 h-12 px-8">
+                    Agenda una consulta
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
               <div className="flex items-center justify-center">
                 <div className="bg-white/20 backdrop-blur-sm p-8 rounded-full">
