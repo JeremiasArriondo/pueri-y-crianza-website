@@ -126,7 +126,8 @@ export function Payment({ price, bgColor, title, guideSlug }: PaymentProps) {
       </Button>
 
       <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
-        Pago seguro mediante MercadoPago.
+        Pago seguro mediante MercadoPago o si preferís, contactame para pagar
+        mediante transferencia.
       </div>
     </div>
   );
