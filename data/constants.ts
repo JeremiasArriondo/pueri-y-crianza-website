@@ -1,7 +1,7 @@
 export const menuItems = [
   { path: "/", name: "Inicio" },
   { path: "/guias", name: "Guías" },
-  { path: "/consulta", name: "Como es una consulta conmigo" },
+  { path: "/consulta", name: "Cómo es una consulta conmigo" },
   { path: "/sobre-mi", name: "Acerca de mi" }
   // { path: "/taller", name: "Taller" },
   // { path: "/mis-redes", name: "Mis Redes" }
