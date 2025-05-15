@@ -1,6 +1,7 @@
 export const menuItems = [
   { path: "/", name: "Inicio" },
   { path: "/guias", name: "Guías" },
+  { path: "/consulta", name: "Como es una consulta conmigo" },
   { path: "/sobre-mi", name: "Acerca de mi" }
   // { path: "/taller", name: "Taller" },
   // { path: "/mis-redes", name: "Mis Redes" }
@@ -106,7 +107,7 @@ export const guides = [
     pages: 24,
     icon: "📚",
     slug: "guia-de-preparacion-para-el-parto-PUERIYCRIANZA",
-    price: 1,
+    price: 7000,
     color: "pink",
     gradient: "bg-gradient-to-r from-yellow-200 to-orange-200",
     bg: "bg-orange-300",
