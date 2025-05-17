@@ -19,6 +19,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-completa-alimentacion-complementaria-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "pink",
     gradient: "bg-gradient-to-r from-pink-300 to-purple-300",
     bg: "bg-pink-500",
@@ -70,6 +71,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-sobre-la-lactancia-en-los-primeros-dias-y-mas-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "pink",
     gradient: "bg-gradient-to-r from-green-200 to-teal-200",
     bg: "bg-teal-400",
@@ -108,6 +110,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-de-preparacion-para-el-parto-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "pink",
     gradient: "bg-gradient-to-r from-yellow-200 to-orange-200",
     bg: "bg-orange-300",
@@ -136,6 +139,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-de-sueno-respetuoso-en-el-primer-ano-de-vida-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "pink",
     gradient: "bg-gradient-to-r from-pink-200 to-rose-200",
     bg: "bg-pink-500",
@@ -174,6 +178,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-completa-sobre-el-metodo-BLW-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "pink",
     gradient: "bg-gradient-to-r from-purple-200 to-violet-200",
     bg: "bg-violet-300",
@@ -211,6 +216,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-de-crianza-respetuosa-desde-el-nacimiento-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "red",
     gradient: "bg-gradient-to-r from-red-200 to-red-400",
     bg: "bg-red-500",
@@ -239,7 +245,7 @@ export const guides = [
   },
   {
     id: 7,
-    title: "Guía completa sobre el destete",
+    title: "Guía completa sobre el destete respetuoso",
     description:
       "Guía para un destete respetuoso que propone cerrar la etapa de lactancia con amor, empatía y conexión, respetando el ritmo de madre e hijo.",
     longDescription:
@@ -248,6 +254,7 @@ export const guides = [
     icon: "📚",
     slug: "guia-sobre-como-lograr-el-destete-respetuoso-PUERIYCRIANZA",
     price: 7000,
+    free: false,
     color: "blue",
     gradient: "bg-gradient-to-r from-blue-200 to-blue-200",
     bg: "bg-blue-300",
@@ -272,5 +279,22 @@ export const guides = [
       },
       { title: "Libros que recomiendo leer" }
     ]
+  },
+  {
+    id: 8,
+    title: "Guía para acompañantes del embarazo, parto y post-parto",
+    description:
+      "Guía para acompañantes que ofrece herramientas para brindar apoyo emocional, físico y consciente durante el embarazo, el parto y el post-parto.",
+    longDescription:
+      "Esta guía está pensada para quienes acompañan a una persona gestante durante el embarazo, el parto y el post-parto. Propone un acompañamiento activo, empático y respetuoso, brindando herramientas para contener emocionalmente, participar con conciencia y apoyar desde el amor. Ser acompañante no significa saberlo todo, sino estar presente, escuchar, respetar tiempos y sostener desde la confianza y la conexión, en una de las etapas más intensas y transformadoras de la vida.",
+    pages: 31,
+    icon: "📚",
+    slug: "guia-para-acompanantes-del-embarazo-parto-y-post-parto-PUERIYCRIANZA",
+    price: 7000,
+    free: true,
+    color: "green",
+    gradient: "bg-gradient-to-r from-green-400 to-green-600",
+    bg: "bg-green-600",
+    chapters: [{ title: "" }]
   }
 ];
