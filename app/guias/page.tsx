@@ -1,7 +1,8 @@
 "use client";
 
+import { FreeBadge } from "@/components/free-badge";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card, CardFooter } from "@/components/ui/card";
 import { guides } from "@/data/constants";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
@@ -54,17 +55,28 @@ export default function Home() {
                       {guide.description}
                     </p>
 
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {guide.pages} páginas
-                      </span>
+                    <CardFooter className="flex items-center justify-between p-0">
+                      <div>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {guide.pages} páginas
+                        </span>
+                        {guide.free ? (
+                          <div className="font-bold text-green-600 dark:text-green-400 flex items-center gap-1">
+                            <FreeBadge size="sm" />
+                          </div>
+                        ) : (
+                          <div className="font-bold text-purple-600 dark:text-purple-400">
+                            ${guide.price.toFixed(2)}
+                          </div>
+                        )}
+                      </div>
                       <Link href={`/guias/${guide.slug}`}>
                         <Button className="rounded-full gap-2 bg-gradient-to-r from-purple-400 to-pink-400 hover:from-purple-700 hover:to-pink-700 text-white border-0">
                           <Download className="h-4 w-4" />
-                          Descargar
+                          {guide.free ? "Descargar" : "Comprar"}
                         </Button>
                       </Link>
-                    </div>
+                    </CardFooter>
                   </div>
                 </div>
               </Card>
