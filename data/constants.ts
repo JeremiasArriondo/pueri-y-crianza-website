@@ -292,9 +292,63 @@ export const guides = [
     slug: "guia-para-acompanantes-del-embarazo-parto-y-post-parto-PUERIYCRIANZA",
     price: 7000,
     free: true,
+    color: "purple",
+    gradient: "bg-gradient-to-r from-purple-400 to-purple-600",
+    bg: "bg-purple-600",
+    chapters: [
+      { title: "¿Qué está viviendo emocionalmente la persona embarazada?" },
+      { title: "Cambios hormonales y emocionales que afectan su sentir" },
+      { title: "Qué significa acompañar desde el respeto y la presencia" },
+      { title: "Qué NO necesita una persona embarazada" },
+      { title: "Cómo sostener el día a día" },
+      { title: "El cuerpo cambia, el vínculo también" },
+      { title: "Prepararse para el parto" },
+      { title: "Cómo apoyar frente a la ansiedad, el miedo o el llanto" },
+      { title: "El rol de la pareja en el parto" },
+      { title: "¿Cómo manejar las visitas en el posparto?" },
+      { title: "Actividades que fortalecen el vínculo familiar" }
+    ]
+  },
+  {
+    id: 9,
+    title: "Guía: embarazo - respondiendo a tus dudas más comunes",
+    description:
+      "Respuestas claras y confiables a las preguntas más frecuentes durante el embarazo, para acompañarte con información y tranquilidad.",
+    longDescription:
+      "Esta guía está pensada para acompañarte durante el embarazo, respondiendo con claridad y empatía a las dudas más comunes que suelen surgir en esta etapa tan especial. Desde los primeros síntomas, controles médicos, alimentación, hasta cambios emocionales, encontrarás información confiable y cercana para transitar el embarazo con mayor seguridad, confianza y bienestar.",
+    pages: 59,
+    icon: "📚",
+    slug: "guia-embarazo-respondiendo-a-tus-dudas-mas-comunes-PUERIYCRIANZA",
+    price: 7000,
+    free: true,
     color: "green",
-    gradient: "bg-gradient-to-r from-green-400 to-green-600",
+    gradient: "bg-gradient-to-r from-green-300 to-green-400",
     bg: "bg-green-600",
-    chapters: [{ title: "" }]
+    chapters: [
+      {
+        title:
+          "¿Es normal sentir esto?: cambios físicos y emocionales mes a mes"
+      },
+      { title: "Qué pasa en tu cuerpo y tus hormonas durante el embarazo" },
+      { title: "Qué estudios se hacen y para qué sirven" },
+      { title: "Alimentación en el embarazo: lo que sí, lo que no y por qué" },
+      { title: "Síntomas frecuentes: náuseas, cansancio, dolor pélvico, etc." },
+      { title: "Movimiento, descanso y conexión con el cuerpo gestante" },
+      {
+        title:
+          "Relación con el bebé durante el embarazo: cómo fortalecer el vínculo"
+      },
+      {
+        title:
+          "Ansiedad, miedo al parto y dudas comunes (¡todo lo que no te animás a preguntar!)"
+      },
+      { title: "La identidad materna en construcción." },
+      { title: "¿Cómo preparar a mi pareja para el parto?" },
+      { title: "¿Qué preparar para recibir al bebé?" },
+      {
+        title: "La importancia del acompañamiento emocional durante el embarazo"
+      },
+      { title: "Preparación para el parto y el puerperio real" }
+    ]
   }
 ];

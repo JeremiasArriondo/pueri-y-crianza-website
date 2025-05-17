@@ -1,4 +1,6 @@
+import { FreeBadge } from "@/components/free-badge";
 import { Payment } from "@/components/payment";
+import { Button } from "@/components/ui/button";
 import { guides } from "@/data/constants";
 import { BookOpen, Clock, FileText, Star } from "lucide-react";
 import { Metadata } from "next";
@@ -57,10 +59,20 @@ export default async function GuiaDetalle(props: { params: Params }) {
             <h1 className="text-3xl font-bold mb-4">{guide.title}</h1>
             <p className="text-lg opacity-90 mb-6">{guide.longDescription}</p>
             <div className="flex flex-col gap-4">
-              <div className="bg-white/20 rounded-lg py-2 px-4 inline-block">
-                <span className="text-2xl font-bold">${guide.price}</span>
-                <span className="text-white/70 ml-1 text-sm">ARS</span>
-              </div>
+              {guide.free ? (
+                <div className="bg-green-500/30 rounded-lg py-2 px-4 inline-block">
+                  <FreeBadge
+                    variant="outline"
+                    className="border-white/70 text-white mr-2"
+                  />
+                  <span className="text-white/90">Descarga gratuita</span>
+                </div>
+              ) : (
+                <div className="bg-white/20 rounded-lg py-2 px-4 inline-block">
+                  <span className="text-2xl font-bold">${guide.price}</span>
+                  <span className="text-white/70 ml-1 text-sm">ARS</span>
+                </div>
+              )}
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center">
                   <Star className="h-5 w-5 fill-current text-yellow-300 mr-1" />
@@ -140,18 +152,44 @@ export default async function GuiaDetalle(props: { params: Params }) {
           {/* Sidebar */}
           <div className="md:col-span-1">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sticky top-24">
-              <Payment
-                price={guide.price}
-                bgColor={guide.bg}
-                title={guide.title}
-                guideSlug={guide.slug}
-              />
+              {guide.free ? (
+                <div className="text-center">
+                  <div className="mb-4 inline-block bg-green-100 dark:bg-green-900/30 p-3 rounded-full">
+                    <FreeBadge size="lg" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">Guía gratuita</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    Esta guía es completamente gratuita. Descárgala ahora y
+                    comienza a aprender.
+                  </p>
+
+                  <a href={`/guias/${guide.slug}.pdf`} download>
+                    <Button
+                      className={`w-full bg-green-600 hover:bg-green-700 mb-4`}
+                    >
+                      <FileText className="h-4 w-4 mr-2" />
+                      Descargar guía
+                    </Button>
+                  </a>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                    No se requiere registro. Descarga inmediata en formato PDF.
+                  </p>
+                </div>
+              ) : (
+                <Payment
+                  price={guide.price}
+                  bgColor={guide.bg}
+                  title={guide.title}
+                  guideSlug={guide.slug}
+                />
+              )}
 
               <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
                 <h3 className="font-medium mb-3">También te puede interesar</h3>
                 <div className="space-y-3">
                   {Object.entries(guides)
                     .filter(([slug]) => slug !== params.slug)
+                    .slice(0, 3)
                     .map(([slug, otherGuia]) => (
                       <Link
                         href={`/guias/${otherGuia.slug}`}
