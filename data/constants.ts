@@ -16,7 +16,7 @@ export const guides = [
     longDescription:
       "Te acompaño paso a paso desde los fundamentos de la lactancia hasta cómo presentar los primeros alimentos, cómo prevenir el ahogo, qué alimentos evitar y por qué, cómo organizarte mejor cada día y cómo disfrutar este proceso sin presiones. Incluye recetas, consejos, tabla de alérgenos y un enfoque perceptivo para que comer sea una experiencia de vínculo, juego y aprendizaje. Una guía pensada para TODA la familia: ideal para quienes buscan una fuente confiable, empática y amorosa en este momento tan especial.",
     pages: 22,
-    icon: "📚",
+    icon: "​​🥑​​",
     slug: "guia-completa-alimentacion-complementaria-PUERIYCRIANZA",
     price: 7000,
     free: false,
@@ -68,7 +68,7 @@ export const guides = [
     longDescription:
       "Con un enfoque actualizado, respetuoso y cercano, te acompaño en cada paso: desde la primera toma, hasta cómo saber si tu bebé está tomando suficiente leche, cómo cuidar tu cuerpo, cómo entender tus emociones… y cómo pedir ayuda a tiempo. Una guía hecha por una puericultora y mamá, para acompañarte con empatía, información clara y mucha contención. Ideal para leer antes o después del parto, sola o en pareja. ¡También es un gran regalo para futuras madres!",
     pages: 21,
-    icon: "📚",
+    icon: "​🤱​​",
     slug: "guia-sobre-la-lactancia-en-los-primeros-dias-y-mas-PUERIYCRIANZA",
     price: 7000,
     free: false,
@@ -136,7 +136,7 @@ export const guides = [
     longDescription:
       "Esta guía es una invitación a comprender el sueño infantil desde un enfoque respetuoso, actualizado y humano. Vas a encontrar información clara sobre cómo se desarrolla el sueño mes a mes, qué es normal, por qué los bebés se despiertan, cómo hacer un colecho seguro y qué mitos es importante dejar atrás. Una herramienta amorosa para acompañar a tu bebé sin culpa, sin presiones y cuidando también tu descanso y tu salud mental. Ideal para madres, padres, parejas gestantes y cuidadores que quieren dejar de lado los métodos invasivos y conectar desde el apego y la confianza.",
     pages: 22,
-    icon: "📚",
+    icon: "​💤​",
     slug: "guia-de-sueno-respetuoso-en-el-primer-ano-de-vida-PUERIYCRIANZA",
     price: 7000,
     free: false,
@@ -213,7 +213,7 @@ export const guides = [
     longDescription:
       "Esta guía de crianza respetuosa propone acompañar a los bebés desde el amor, el respeto y la conexión emocional. Reconoce que, aunque nadie nace sabiendo ser madre o padre, los bebés sí nacen sabiendo lo que necesitan: contacto físico, presencia constante, una voz que los contenga y brazos que les brinden seguridad. Criar con respeto implica escuchar profundamente y responder con empatía a esas necesidades esenciales.",
     pages: 48,
-    icon: "📚",
+    icon: "​👶​",
     slug: "guia-de-crianza-respetuosa-desde-el-nacimiento-PUERIYCRIANZA",
     price: 7000,
     free: false,
@@ -251,7 +251,7 @@ export const guides = [
     longDescription:
       "Esta guía para un destete respetuoso invita a acompañar el fin de la lactancia como un proceso de transición amorosa, y no como una ruptura abrupta. Destetar no es simplemente dejar de amamantar, sino cerrar una etapa fundamental del vínculo entre madre e hijo con empatía, paciencia y respeto mutuo. Escuchar las señales del bebé, atender las propias emociones y transitar este cambio desde la conexión permite que el destete sea una experiencia amorosa, natural y contenida para ambos.",
     pages: 25,
-    icon: "📚",
+    icon: "🤱",
     slug: "guia-sobre-como-lograr-el-destete-respetuoso-PUERIYCRIANZA",
     price: 7000,
     free: false,
@@ -288,7 +288,7 @@ export const guides = [
     longDescription:
       "Esta guía está pensada para quienes acompañan a una persona gestante durante el embarazo, el parto y el post-parto. Propone un acompañamiento activo, empático y respetuoso, brindando herramientas para contener emocionalmente, participar con conciencia y apoyar desde el amor. Ser acompañante no significa saberlo todo, sino estar presente, escuchar, respetar tiempos y sostener desde la confianza y la conexión, en una de las etapas más intensas y transformadoras de la vida.",
     pages: 31,
-    icon: "📚",
+    icon: "​💞​",
     slug: "guia-para-acompanantes-del-embarazo-parto-y-post-parto-PUERIYCRIANZA",
     price: 7000,
     free: true,
@@ -317,7 +317,7 @@ export const guides = [
     longDescription:
       "Esta guía está pensada para acompañarte durante el embarazo, respondiendo con claridad y empatía a las dudas más comunes que suelen surgir en esta etapa tan especial. Desde los primeros síntomas, controles médicos, alimentación, hasta cambios emocionales, encontrarás información confiable y cercana para transitar el embarazo con mayor seguridad, confianza y bienestar.",
     pages: 59,
-    icon: "📚",
+    icon: "🤰🏻​",
     slug: "guia-embarazo-respondiendo-a-tus-dudas-mas-comunes-PUERIYCRIANZA",
     price: 7000,
     free: true,
